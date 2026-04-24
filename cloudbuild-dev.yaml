@@ -1,5 +1,4 @@
 steps:
-  # Build the Docker image
   - name: gcr.io/cloud-builders/docker
     args:
       [
@@ -9,7 +8,6 @@ steps:
         "."
       ]
 
-  # Push the Docker image to Artifact Registry
   - name: gcr.io/cloud-builders/docker
     args:
       [
@@ -17,7 +15,6 @@ steps:
         "us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild-dev:v1.0"
       ]
 
-  # Deploy the image to the GKE dev namespace
   - name: gcr.io/cloud-builders/kubectl
     args:
       [
@@ -32,5 +29,4 @@ steps:
       - "CLOUDSDK_CONTAINER_CLUSTER=hello-cluster"
 
 images:
-  - "us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild-dev:v1.0"o
-
+  - "us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild-dev:v1.0"
