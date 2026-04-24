@@ -36,3 +36,4 @@ func blueHandler(w http.ResponseWriter, r *http.Request) {
 	png.Encode(w, img)
 }// test
 // retry build
+// fix artifact registry api
