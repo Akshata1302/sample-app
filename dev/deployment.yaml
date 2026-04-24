@@ -2,18 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: development-deployment
+  labels:
+    app: hello-cloudbuild-dev
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: dev-app
+      app: hello-cloudbuild-dev
   template:
     metadata:
       labels:
-        app: dev-app
+        app: hello-cloudbuild-dev
     spec:
       containers:
-      - name: dev-container
-        image: <todo>
+      - name: hello-cloudbuild-dev
+        image: us-central1-docker.pkg.dev/qwiklabs-gcp-02-182cdf3a6ddc/my-repository/hello-cloudbuild-dev:v1.0
         ports:
         - containerPort: 8080
