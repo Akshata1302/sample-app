@@ -38,3 +38,4 @@ func blueHandler(w http.ResponseWriter, r *http.Request) {
 // retry build
 // fix artifact registry api
 // force rebuild v1.0
+// force clean dev v1.0 build
