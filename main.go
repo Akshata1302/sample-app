@@ -39,3 +39,4 @@ func blueHandler(w http.ResponseWriter, r *http.Request) {
 // fix artifact registry api
 // force rebuild v1.0
 // force clean dev v1.0 build
+// force image tag v1.0
