@@ -15,7 +15,6 @@
  */
 
 package main
-package main
 
 import (
     "image"
